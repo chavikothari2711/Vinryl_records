@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding:20px
+}
+header h1{
+    font-family: 'Rubik Mono One', monospace;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+body{
+    background: #750000;
+    color:#fff;
+    overflow-x: hidden;
+    
+}
+section{
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+}
+.sec{
+    margin-left:500px;
+    padding-top:180px;
+    width:560px;
+    height: 560px;
+    visibility: hidden;
+    opacity:0;
+}
+.sec h1{
+    font-family: 'Rubik Mono One', monospace;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.sec p{
+    line-height: 1.3;
+    font-size: 1.2rem;
+}
+
+section img{
+    position: absolute;
+    left:500px;
+}
+section img#honeysingh{
+    left:1900px;
+}
+section img#darshanraval{
+    left:1200px;
+    transform: rotate(180deg);
+}
+section img#emiwaybantai{
+    left:2600px;
+}
+section img#raftaar{
+    left:3300px;
+}
+
+#controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    gap:30px
+}
+.btn{
+    background: #fff;
+    opacity: 0.5;
+    padding:10px;
+    font-size: 1.5rem;
+    border:none;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.animateOnceMainToPrev{
+    animation: mainToPrev 0.5s linear normal;
+   
+}
+.animateOnceNextToMain{
+    animation: NextToMain 0.5s linear normal;
+    
+}
+.animateNextToNext{
+    animation: NextToNext 0.5s linear normal;
+    
+}
+.animatePrevToPrev{
+    animation: PrevToPrev 0.5s linear normal;
+    
+}
+.animateOncePrevToMain{
+    animation: PrevToMain 0.5s linear normal;
+}
+.animateOnceMainToNext{
+    animation: mainToNext 0.5s linear normal;
+}
+.animateOnceNextToNext{
+    animation: OnceNextToNext 0.5s linear normal
+}
+.animateOncePrevToPrev{
+    animation: OncePrevToPrev 0.5s linear normal;
+}
+
+@keyframes NextToMain {
+    from{
+        left:1200px;
+        transform:rotate(180deg);
+    }
+    to{
+        left:500px;
+        transform:rotate(0deg);
+    }
+}
+@keyframes mainToPrev{
+    from{
+        left:500px;
+        transform:rotate(0deg);
+    }
+    to{
+        left:-200px;
+        transform:rotate(180deg);
+    }
+}
+@keyframes mainToNext{
+    from{
+        left:500px;
+        transform:rotate(0deg);
+    }
+    to{
+        left:1200px;
+        transform:rotate(180deg);
+    }
+}
+@keyframes NextToNext{
+    from{
+        left:1900px;
+        transform:rotate(0deg);
+    }
+    to{
+        left:1200px;
+        transform:rotate(180deg);
+    }
+}
+@keyframes OnceNextToNext {
+    from{
+        left:1200px;
+        transform:rotate(180deg);
+    }
+    to{
+        left:1900px;
+        transform:rotate(0deg);
+    }
+    
+}
+@keyframes PrevToPrev{
+    from{
+        left:-200px;
+        transform:rotate(180deg);
+    }
+    to{
+        left:-900px;
+        transform:rotate(0deg);
+    }
+}
+@keyframes OncePrevToPrev {
+    from{
+        left:-900px;
+        transform:rotate(0deg);
+    }
+    to{
+        left:-200px;
+        transform:rotate(180deg);
+    } 
+}
+@keyframes PrevToMain {
+    from{
+        left:-200px;
+        transform: rotate(180deg);
+    }
+    to{
+        left:500px;
+        transform: rotate(0deg);
+    }
+    
+}
+
+/*fade in and fade out animation*/
+.animateMainToSide{
+    animation: mainToSide 0.5s linear normal ;
+}
+.animateSideToMain{
+    animation: sideToMain 0.5s linear normal ;
+}
+.animatePrevToOut{
+    animation: prevToOut 0.5s linear normal ;
+}
+.animateNextToIn{
+    animation: nextToIn 0.5s linear normal ;
+}
+.animateNextToOut{
+    animation: nextToOut 0.5s linear normal ;
+}
+.animatePrevToIn{
+    animation: prevToIn 0.5s linear normal ;
+}
+.animateRemoveBlock{
+    animation: removeBlock 0.5s linear normal;
+}
+.animateAddBlock{
+    animation: addBlock 0.5s linear normal;
+}
+
+
+@keyframes mainToSide {
+    from{
+        left:500px;
+        transform: rotate(0deg);
+    }
+    to{
+        left:100px;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes sideToMain {
+    from{
+        left:100px;
+        transform: rotate(-360deg);
+    }
+    to{
+        left:500px;
+        transform: rotate(0deg);
+    }
+}
+@keyframes prevToOut {
+   from{
+    left:-200px
+   } 
+   to{
+    left:-900px
+   }
+}
+@keyframes prevToIn {
+    from{
+     left:-900px
+    } 
+    to{
+     left:-200px
+    }
+}
+@keyframes nextToOut {
+    from{
+     left:1200px
+    } 
+    to{
+     left:1900px
+    }
+ }
+ @keyframes nextToIn {
+    from{
+     left:1900px
+    } 
+    to{
+     left:1200px
+    }
+}
+@keyframes removeBlock {
+    from{
+        visibility: visible;
+        opacity:1;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@keyframes addBlock {
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
